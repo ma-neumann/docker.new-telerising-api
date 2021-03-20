@@ -4,7 +4,7 @@ LABEL maintainer="Bastian Kleinschmidt <debaschdi@googlemail.com>" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.name="docker.new-telerising-api"
 
-ARG DEPENDENCIES="sed curl wget git perl nano net-tools unzip ca-certificates"
+ARG DEPENDENCIES="bind9-host sed curl wget git perl nano net-tools unzip ca-certificates"
 
 ENV USER_ID="99" \
     GROUP_ID="100" \

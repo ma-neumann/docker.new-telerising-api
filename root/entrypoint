@@ -20,6 +20,12 @@ if [[ -z "${UPDATE}" ]]; then
   UPDATE='yes'
 fi
 
+# Wait until DNS is available
+until host github.com > /dev/null; do
+  echo "DNS not yet available"
+  sleep 1;
+done
+
 if [[ ! -f /telerising/api ]] || [[ "${UPDATE}" = "yes" ]]; then
   /usr/local/bin/telerising.update
 fi
